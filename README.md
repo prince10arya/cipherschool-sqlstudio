@@ -3,9 +3,9 @@
 A browser-based SQL learning platform where students can practice SQL queries against pre-configured assignments with real-time execution and intelligent hints.
 
 <div style="display: flex; justify-content: space-between;">
-   <img src="./ui_ss/Screenshot (18).png" alt="homepage">
-   <img src="./ui_ss/Screenshot (19).png" alt="workspace">
-   <img src="./ui_ss/Screenshot (20).png" alt="admin">
+   <img src="./ui_ss/Screenshot (18).png" alt="homepage" width="32%">
+   <img src="./ui_ss/Screenshot (19).png" alt="workspace" width="32%">
+   <img src="./ui_ss/Screenshot (20).png" alt="admin" width="32%">
 </div>
 
 ## Project Structure
