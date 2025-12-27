@@ -1,0 +1,71 @@
+version: '3.8'
+
+services:
+  # MongoDB Service
+  # mongodb:
+  #   image: mongo:8.2
+  #   container_name: ciphersql-mongodb
+  #   restart: unless-stopped
+  #   ports:
+  #     - "27017:27017"
+  #   volumes:
+  #     - mongodb_data:/data/db
+  #   env_file:
+  #     - ./server/.env
+  #   networks:
+  #     - ciphersql-network
+
+  # PostgreSQL Service  
+  postgres:
+    image: postgres:17.7
+    container_name: ciphersql-postgres
+    restart: unless-stopped
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=root
+      - POSTGRES_DB=ciphersql_sandbox
+    networks:
+      - ciphersql-network
+
+  # Backend Service
+  backend:
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    container_name: ciphersql-backend
+    restart: unless-stopped
+    ports:
+      - "5000:5000"
+    env_file:
+      - ./server/.env
+    networks:
+      - ciphersql-network
+
+  # Frontend Service
+  frontend:
+    build:
+      context: ./client/my-react-app
+      dockerfile: Dockerfile
+    container_name: ciphersql-frontend
+    restart: unless-stopped
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+      - WATCHPACK_POLLING=true
+      - WDS_SOCKET_HOST=localhost
+    ports:
+      - "5173:5173"
+    depends_on:
+      - backend
+    networks:
+      - ciphersql-network
+
+networks:
+  ciphersql-network:
+    driver: bridge
+
+volumes:
+  postgres_data:

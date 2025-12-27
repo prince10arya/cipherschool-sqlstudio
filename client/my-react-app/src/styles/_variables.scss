@@ -1,0 +1,187 @@
+// ==========================================
+// PREMIUM DESIGN TOKENS - CipherSQL Studio
+// Design System: Glassmorphism with Modern Swiss Aesthetics
+// ==========================================
+
+// ===== BREAKPOINTS (Mobile-First) =====
+$breakpoint-sm: 640px; // Small tablets
+$breakpoint-md: 768px; // Tablets
+$breakpoint-lg: 1024px; // Desktops
+$breakpoint-xl: 1280px; // Large desktops
+$breakpoint-2xl: 1536px; // Ultra-wide
+
+// ===== TYPOGRAPHY =====
+// Primary: Inter for body text (excellent readability)
+// Secondary: Geist for headings (modern, clean)
+$font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+$font-heading: 'Geist', 'Inter', sans-serif;
+$font-mono: 'JetBrains Mono', 'Fira Code', 'Monaco', 'Courier New', monospace;
+
+// Font Sizes (Fluid typography with clamp)
+$text-xs: clamp(0.75rem, 0.7rem + 0.2vw, 0.8125rem); // 12-13px
+$text-sm: clamp(0.875rem, 0.8rem + 0.3vw, 0.9375rem); // 14-15px
+$text-base: clamp(1rem, 0.95rem + 0.2vw, 1.0625rem); // 16-17px
+$text-lg: clamp(1.125rem, 1rem + 0.5vw, 1.25rem); // 18-20px
+$text-xl: clamp(1.25rem, 1.1rem + 0.6vw, 1.5rem); // 20-24px
+$text-2xl: clamp(1.5rem, 1.3rem + 0.8vw, 1.875rem); // 24-30px
+$text-3xl: clamp(1.875rem, 1.6rem + 1.2vw, 2.25rem); // 30-36px
+$text-4xl: clamp(2.25rem, 2rem + 1.5vw, 3rem); // 36-48px
+
+// Font Weights
+$font-light: 300;
+$font-regular: 400;
+$font-medium: 500;
+$font-semibold: 600;
+$font-bold: 700;
+$font-extrabold: 800;
+
+// Line Heights
+$leading-tight: 1.25;
+$leading-snug: 1.375;
+$leading-normal: 1.5;
+$leading-relaxed: 1.625;
+$leading-loose: 2;
+
+// ===== COLORS - DARK THEME (Primary) =====
+// Glassmorphism-friendly palette with proper contrast
+
+// Primary Brand Colors
+$dark-primary: #8b5cf6; // Violet 500 - Main brand
+$dark-primary-light: #a78bfa; // Violet 400 - Hover states
+$dark-primary-dark: #7c3aed; // Violet 600 - Active states
+
+// Backgrounds (Glassmorphism-ready)
+$dark-bg-primary: #0f0f1a; // Deep navy black
+$dark-bg-secondary: #1a1a2e; // Elevated surface
+$dark-bg-tertiary: #252538; // Card backgrounds
+$dark-bg-glass: rgba(26, 26, 46, 0.7); // Glass panels
+$dark-bg-overlay: rgba(0, 0, 0, 0.5); // Modals/overlays
+
+// Text Colors (WCAG AA compliant)
+$dark-text-primary: #f8fafc; // Contrast ratio: 15.8:1
+$dark-text-secondary: #cbd5e1; // Contrast ratio: 12.6:1
+$dark-text-tertiary: #94a3b8; // Contrast ratio: 7.7:1
+$dark-text-muted: #64748b; // Contrast ratio: 5.2:1
+
+// Borders & Dividers
+$dark-border: rgba(148, 163, 184, 0.15);
+$dark-border-light: rgba(148, 163, 184, 0.08);
+$dark-divider: rgba(148, 163, 184, 0.12);
+
+// Status Colors
+$dark-success: #22c55e; // Green 500
+$dark-warning: #f59e0b; // Amber 500
+$dark-error: #ef4444; // Red 500
+$dark-info: #3b82f6; // Blue 500
+
+// ===== COLORS - LIGHT THEME =====
+// Clean, airy palette with proper contrast
+
+// Primary Brand Colors
+$light-primary: #7c3aed; // Violet 600
+$light-primary-light: #8b5cf6; // Violet 500
+$light-primary-dark: #6d28d9; // Violet 700
+
+// Backgrounds
+$light-bg-primary: #ffffff;
+$light-bg-secondary: #f8fafc; // Slate 50
+$light-bg-tertiary: #f1f5f9; // Slate 100
+$light-bg-glass: rgba(255, 255, 255, 0.8);
+$light-bg-overlay: rgba(0, 0, 0, 0.3);
+
+// Text Colors (WCAG AA compliant)
+$light-text-primary: #0f172a; // Slate 900 - Contrast ratio: 16.1:1
+$light-text-secondary: #334155; // Slate 700 - Contrast ratio: 11.5:1
+$light-text-tertiary: #64748b; // Slate 500 - Contrast ratio: 6.5:1
+$light-text-muted: #94a3b8; // Slate 400 - Contrast ratio: 4.6:1
+
+// Borders & Dividers
+$light-border: rgba(15, 23, 42, 0.12);
+$light-border-light: rgba(15, 23, 42, 0.06);
+$light-divider: rgba(15, 23, 42, 0.08);
+
+// Status Colors
+$light-success: #16a34a; // Green 600
+$light-warning: #d97706; // Amber 600
+$light-error: #dc2626; // Red 600
+$light-info: #2563eb; // Blue 600
+
+// ===== SPACING SYSTEM (8px base grid) =====
+$space-0: 0;
+$space-1: 0.25rem; // 4px
+$space-2: 0.5rem; // 8px
+$space-3: 0.75rem; // 12px
+$space-4: 1rem; // 16px
+$space-5: 1.25rem; // 20px
+$space-6: 1.5rem; // 24px
+$space-8: 2rem; // 32px
+$space-10: 2.5rem; // 40px
+$space-12: 3rem; // 48px
+$space-16: 4rem; // 64px
+$space-20: 5rem; // 80px
+$space-24: 6rem; // 96px
+
+// ===== BORDER RADIUS =====
+$radius-sm: 0.375rem; // 6px
+$radius-base: 0.5rem; // 8px
+$radius-md: 0.75rem; // 12px
+$radius-lg: 1rem; // 16px
+$radius-xl: 1.5rem; // 24px
+$radius-2xl: 2rem; // 32px
+$radius-full: 9999px; // Pills/circles
+
+// ===== SHADOWS (Layered elevation) =====
+// Soft, realistic shadows for depth
+$shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+$shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+$shadow-base: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+$shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+$shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+$shadow-xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+$shadow-2xl: 0 35px 60px -15px rgba(0, 0, 0, 0.3);
+
+// Colored shadows for glass effect
+$shadow-primary: 0 10px 30px -5px rgba(139, 92, 246, 0.3);
+$shadow-primary-lg: 0 20px 40px -10px rgba(139, 92, 246, 0.4);
+
+// ===== Z-INDEX SYSTEM =====
+$z-base: 1;
+$z-dropdown: 10;
+$z-sticky: 20;
+$z-fixed: 30;
+$z-modal-backdrop: 40;
+$z-modal: 50;
+$z-popover: 60;
+$z-tooltip: 70;
+
+// ===== TRANSITIONS & ANIMATIONS =====
+// Micro-animations for premium feel
+$transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+$transition-base: 200ms cubic-bezier(0.4, 0, 0.2, 1);
+$transition-slow: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+$transition-slowest: 500ms cubic-bezier(0.4, 0, 0.2, 1);
+
+// Easing functions
+$ease-in: cubic-bezier(0.4, 0, 1, 1);
+$ease-out: cubic-bezier(0, 0, 0.2, 1);
+$ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+$ease-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+// ===== GLASSMORPHISM EFFECTS =====
+$glass-blur: blur(16px);
+$glass-blur-sm: blur(8px);
+$glass-blur-lg: blur(24px);
+
+// ===== MAX WIDTHS (Container sizes) =====
+$max-w-xs: 20rem; // 320px
+$max-w-sm: 24rem; // 384px
+$max-w-md: 28rem; // 448px
+$max-w-lg: 32rem; // 512px
+$max-w-xl: 36rem; // 576px
+$max-w-2xl: 42rem; // 672px
+$max-w-3xl: 48rem; // 768px
+$max-w-4xl: 56rem; // 896px
+$max-w-5xl: 64rem; // 1024px
+$max-w-6xl: 72rem; // 1152px
+$max-w-7xl: 80rem; // 1280px
+$max-w-full: 100%;

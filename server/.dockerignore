@@ -1,0 +1,27 @@
+# Node.js dependencies
+node_modules
+npm-debug.log
+yarn-error.log
+
+# Environment variables
+.env
+.env.local
+
+# Git
+.git
+.gitignore
+
+# IDE
+.vscode
+.idea
+
+# Logs
+logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Test coverage
+coverage
