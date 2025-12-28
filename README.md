@@ -118,11 +118,23 @@ The easiest way to run CipherSQL Studio is using Docker:
    docker-compose logs -f
    ```
 
-4. **Access**:
+4. **Seed Sample schemas**:
+   ```bash
+   # Get container ID
+   docker ps
+   
+   # Copy setup.sql to container
+   docker cp setup.sql <container_id>:/tmp/setup.sql
+   
+   # Seed schemas
+   docker exec -it <container_id> psql -U postgres -d ciphersql_sandbox -f /tmp/setup.sql
+   ```
+
+5. **Access**:
    - Frontend: `http://localhost`
    - Backend API: `http://localhost:5000`
 
-5. **Stop**:
+6. **Stop**:
    ```bash
    docker-compose down
    
@@ -132,7 +144,7 @@ The easiest way to run CipherSQL Studio is using Docker:
 
 ### Docker Services
 
-- **Frontend**: Nginx serving React app on port 80
+- **Frontend**: React app on port 5173
 - **Backend**: Express server on port 5000
 - **MongoDB**: Database on port 27017 (assignments)
 - **PostgreSQL**: Database on port 5432 (query sandbox)
